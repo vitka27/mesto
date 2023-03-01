@@ -64,6 +64,11 @@
         padding-bottom: 0;
     }
 }
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0;
+    }
+}
 .popup {
     display: flex;
     position: fixed;
@@ -90,6 +95,9 @@
         border-radius: 10px;
         display: flex;
         justify-content: center;
+        @include _480(){
+            margin: auto 19px;
+        }
     }
 
     // .popup__form
@@ -102,11 +110,15 @@
     &__title {
         color: black;
         margin: 0;
-        padding: 34px 0 54px 0;
+        padding: 34px 0 48px 0;
         font-style: normal;
         font-weight: 900;
         font-size: 24px;
         line-height: 29px;
+        @include _600(){
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 
     // .popup__user-info
@@ -126,8 +138,7 @@
         border: 0;
         padding: 0 0 13px 0;
         border-bottom: 1px solid #000000;
-        margin-bottom: 30px;
-        min-width: 358px;
+        margin-bottom: 22px;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -148,7 +159,6 @@
         padding: 0 0 13px 0;
         border: 0;
         border-bottom: 1px solid #000000;
-        min-width: 358px;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -160,7 +170,7 @@
     &__submit {
         width: 358px;
         height: 50px;
-        margin: 48px 0 37px 0;
+        margin: 48px auto 37px;
         border: 0;
         padding: 0;
         background-color: black;
@@ -170,6 +180,12 @@
         font-size: 18px;
         line-height: 22px;
         text-align: center;
+        @include _768(){
+            margin: 45px auto 25px;
+            width: 238px;
+            font-size: 14px;
+            line-height: 17px;
+        }
     }
     &__close {
         position: absolute;
@@ -180,6 +196,12 @@
         background-image: url(./image/Close-Icon.svg);
         background-repeat: no-repeat;
         background-size: cover;
+        @include _600(){
+            top: -30px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 .header {
@@ -189,7 +211,10 @@
     border-bottom: solid 1px #545454;
     // .header__logo
     @include _979() {
-        padding: 28px 0 31.6px;
+        padding: 28px 0 27.6px;
+    }
+    @include _768() {
+        padding-left: 17px;
     }
 
     &__logo {
@@ -213,7 +238,8 @@
     flex-wrap: wrap;
     align-items: center;
     padding: 36px 0 46px;
-    @include _979() {
+    @include _768() {
+        flex-direction: column;
         justify-content: center;
         padding: 38.25px 0 36px;
     }
@@ -241,7 +267,8 @@
     &__wrap {
         display: flex;
         @include _979() {
-            padding-bottom: 14px;
+            padding-bottom: 10px;
+            margin: auto;
         }
     }
 
@@ -249,7 +276,8 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        @include _979() {
+        @include _768() {
+            flex-direction: column;
             justify-content: center;
         }
     }
@@ -301,8 +329,15 @@
     // .profile-user__add-content
 
     &__add-content {
+        background: none;
+        border: none;
+        background-image: url(./image/Add\ Button.svg);
         width: 150px;
         height: 50px;
+        @include _768() {
+            width: 282px;
+            background-image: url(./image/Add\ Button\ big.svg);
+        }
     }
 }
 // .photo-user__item
@@ -312,8 +347,8 @@
     grid-auto-rows: 362px;
     gap: 20px 17px;
     padding-bottom: 67px;
-    @include _979() {
-        padding-bottom: 48px;
+    @include _768(){
+        padding: 0 19px 48px;
     }
 
     &__item {
@@ -352,8 +387,8 @@
 }
 .footer {
     padding-bottom: 60px;
-    @include _979() {
-        padding-bottom: 36px;
+    @include _768(){
+        padding: 0 19px 36px;
     }
 
     // .footer__copyright
