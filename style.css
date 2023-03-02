@@ -28,7 +28,6 @@
     padding: 0;
   }
 }
-
 .popup {
   display: none;
   position: fixed;
@@ -40,9 +39,6 @@
   background-color: rgba(0, 0, 0, 0.5);
   max-width: 100%;
   max-height: 100%;
-}
-.popup_open {
-  display: flex;
 }
 .popup__container {
   position: relative;
@@ -76,6 +72,8 @@
 }
 @media screen and (max-width: 600px) {
   .popup__title {
+    padding-top: 26px;
+    padding-bottom: 74px;
     font-size: 18px;
     line-height: 22px;
   }
@@ -88,7 +86,7 @@
   display: flex;
   flex-direction: column;
 }
-.popup__user-name {
+.popup__input {
   border: 0;
   padding: 0 0 13px 0;
   border-bottom: 1px solid #000000;
@@ -98,30 +96,11 @@
   font-size: 14px;
   line-height: 17px;
 }
-.popup__user-name::-moz-placeholder {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
+.popup__input:focus {
+  outline: none;
 }
-.popup__user-name::placeholder {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-.popup__profession {
-  padding: 0 0 13px 0;
-  border: 0;
-  border-bottom: 1px solid #000000;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+.popup__input:nth-child(2) {
+  margin-bottom: 0px;
 }
 .popup__submit {
   width: 358px;
@@ -151,17 +130,23 @@
   right: -40px;
   width: 32px;
   height: 32px;
+  border: none;
   background-image: url(./image/Close-Icon.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 600px) {
   .popup__close {
-    top: -30px;
+    top: -36px;
     right: 0;
     width: 20px;
     height: 20px;
   }
+}
+
+.popup_open {
+  display: flex;
 }
 
 .header {
@@ -276,13 +261,21 @@
   }
 }
 .profile-user__edit {
+  background-image: url(./image/Edit\ Button.svg);
+  background-color: #000000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  outline: none;
+  border: none;
+  width: 24px;
+  height: 24px;
   align-self: center;
-  padding-left: 18px;
+  margin-left: 18px;
+  padding: 0;
 }
 @media screen and (max-width: 979px) {
   .profile-user__edit {
-    max-width: 18px;
-    padding-left: 10px;
+    width: 18px;
   }
 }
 .profile-user__add-content {
@@ -330,9 +323,20 @@
   font-size: 24px;
   line-height: 29px;
   padding-left: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 190px;
 }
 .photo-user__like {
+  background-image: url(./image/like.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  border: none;
   position: absolute;
+  width: 22px;
+  height: 19px;
   bottom: 30px;
   right: 20px;
 }
