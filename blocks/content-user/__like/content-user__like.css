@@ -1,0 +1,12 @@
+.content-user__like {
+  background-image: url(./image/like.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  border: none;
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  bottom: 30px;
+  right: 20px;
+}

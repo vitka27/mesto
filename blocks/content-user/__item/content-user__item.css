@@ -1,0 +1,6 @@
+.content-user__item {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
