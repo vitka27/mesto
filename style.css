@@ -8,7 +8,7 @@
 }
 
 .wrapper {
-  min-width: 280px;
+  min-width: 320px;
   max-width: 880px;
   margin: auto;
   padding: calc(19px + 181 * (100vw - 320px) / 960);
@@ -115,6 +115,7 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .popup__submit {
@@ -134,7 +135,8 @@
   background-image: url(./image/Close-Icon.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
   .popup__close {
@@ -214,6 +216,7 @@
 }
 @media screen and (max-width: 979px) {
   .profile-user__wrap {
+    position: relative;
     padding-bottom: 10px;
     margin: auto;
   }
@@ -235,6 +238,10 @@
   font-weight: 500;
   font-size: 42px;
   line-height: 48px;
+  max-width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media screen and (max-width: 979px) {
   .profile-user__name {
@@ -244,6 +251,7 @@
     font-size: 27px;
     line-height: 33px;
     text-align: center;
+    max-width: 220px;
   }
 }
 .profile-user__profession {
@@ -252,10 +260,15 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media screen and (max-width: 979px) {
   .profile-user__profession {
     text-align: center;
+    max-width: 220px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -272,10 +285,15 @@
   align-self: center;
   margin-left: 18px;
   padding: 0;
+  cursor: pointer;
 }
 @media screen and (max-width: 979px) {
   .profile-user__edit {
+    margin: 0;
+    position: absolute;
+    right: -30px;
     width: 18px;
+    height: 18px;
   }
 }
 .profile-user__add-content {
@@ -284,6 +302,7 @@
   background-image: url(./image/Add\ Button.svg);
   width: 150px;
   height: 50px;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .profile-user__add-content {
