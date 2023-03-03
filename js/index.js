@@ -1,21 +1,25 @@
 let popup = document.querySelector(".popup");
 let popupClose = popup.querySelector(".popup__close");
-let buttonEdit = document.querySelector(".profile-user__edit");
-
-let userName = document.querySelector(".profile-user__name");
-let userProfession = document.querySelector(".profile-user__profession");
-
+let popupSubmit = popup.querySelector(".popup__submit");
 let popupUserName = popup.querySelectorAll(".popup__input")[0];
 let popupUserProfession = popup.querySelectorAll(".popup__input")[1];
-console.log(popupUserName);
 
+let buttonEdit = document.querySelector(".profile-user__edit");
+let userName = document.querySelector(".profile-user__name");
+let userProfession = document.querySelector(".profile-user__profession");
 
 buttonEdit.addEventListener("click", () => {
   popup.classList.toggle("popup_open");
 
   popupUserName.value = userName.textContent;
   popupUserProfession.value = userProfession.textContent;
+});
 
+popupSubmit.addEventListener("click", (event) => {
+  event.preventDefault();
+  userName.textContent = popupUserName.value;
+  userProfession.textContent = popupUserProfession.value;
+  popup.classList.toggle("popup_open");
 });
 
 popupClose.addEventListener("click", () => {
