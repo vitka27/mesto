@@ -21,7 +21,7 @@ popupSubmit.addEventListener("click", (event) => {
   userProfession.textContent = popupUserProfession.value;
   popup.classList.toggle("popup_open");
 });
-
+//test
 popupClose.addEventListener("click", () => {
   popup.classList.toggle("popup_open");
 });
