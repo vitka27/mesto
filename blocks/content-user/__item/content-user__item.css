@@ -1,6 +1,12 @@
 .content-user__item {
-  position: relative;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 240px 42px;
+  grid-template-rows: 282px 79px;
+  grid-template-areas:
+    "image image"
+    "title like";
+  align-items: center;
 }

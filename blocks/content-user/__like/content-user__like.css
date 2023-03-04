@@ -1,16 +1,15 @@
 .content-user__like {
+  grid-area: like;
   background-image: url(../../../image/button/like.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
   border: none;
-  position: absolute;
   width: 22px;
   height: 19px;
-  bottom: 30px;
-  right: 20px;
   cursor: pointer;
-  transition: opacity .4s;
+  transition: opacity 0.4s;
+  padding: 0;
 }
 .content-user__like:hover {
   opacity: 0.5;

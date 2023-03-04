@@ -1,4 +1,5 @@
 .content-user__title {
+  grid-area: title;
   font-family: inherit;
   color: black;
   font-style: normal;
