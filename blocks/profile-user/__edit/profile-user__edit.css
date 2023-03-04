@@ -1,5 +1,5 @@
 .profile-user__edit {
-  background-image: url(../../../image/Edit\ Button.svg);
+  background-image: url(../../../image/button/Edit\ Button.svg);
   background-color: #000000;
   background-size: contain;
   background-repeat: no-repeat;
@@ -11,6 +11,7 @@
   margin-left: 18px;
   padding: 0;
   cursor: pointer;
+  transition: opacity .4s;
 }
 .profile-user__edit:hover {
   opacity: 0.6;
