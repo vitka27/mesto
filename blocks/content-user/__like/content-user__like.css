@@ -1,5 +1,5 @@
 .content-user__like {
-  background-image: url(../../../image/like.png);
+  background-image: url(../../../image/like.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
@@ -9,4 +9,12 @@
   height: 19px;
   bottom: 30px;
   right: 20px;
+  cursor: pointer;
+}
+.content-user__like:hover {
+  opacity: 0.5;
+}
+.content-user__like:active {
+  opacity: 1;
+  background-image: url(../../../image/like_active.svg);
 }

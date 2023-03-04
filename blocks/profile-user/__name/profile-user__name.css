@@ -1,4 +1,5 @@
 .profile-user__name {
+  font-family: inherit;
   margin: 0;
   font-style: normal;
   font-weight: 500;
@@ -10,13 +11,11 @@
   text-overflow: ellipsis;
 }
 @media screen and (max-width: 979px) {
-    .profile-user__name {
-        font-family: inherit;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 27px;
-        line-height: 33px;
-        text-align: center;
-        max-width: 220px;
-      }
+  .profile-user__name {
+    font-style: normal;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+    max-width: 220px;
+  }
 }
