@@ -1,6 +1,6 @@
 .profile-user__edit {
-  background-image: url(../../../image/button/Edit\ Button.svg);
-  background-color: #000000;
+  background-image: url(../../../image/button/edit_button.svg);
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   outline: none;
