@@ -1,27 +1,39 @@
+// получаем элементы с popup
 let popup = document.querySelector(".popup");
-let popupClose = popup.querySelector(".popup__close");
-let popupSubmit = popup.querySelector(".popup__submit");
-let popupUserName = popup.querySelectorAll(".popup__input")[0];
-let popupUserProfession = popup.querySelectorAll(".popup__input")[1];
+let buttonPopupClose = popup.querySelector(".popup__close");
+let inputPopupUserName = popup.querySelector(".popup__input_name");
+let inputPopupUserProfession = popup.querySelector(".popup__input_my-info");
 
-let buttonEdit = document.querySelector(".profile-user__edit");
-let userName = document.querySelector(".profile-user__name");
-let userProfession = document.querySelector(".profile-user__profession");
+// получаем элементы с профиля пользователя
+let buttonEditProfile = document.querySelector(".profile-user__edit");
+let userNameProfile = document.querySelector(".profile-user__name");
+let userProfessionProfile = document.querySelector(".profile-user__profession");
 
-buttonEdit.addEventListener("click", () => {
-  popup.classList.toggle("popup_opened");
+// открываем попап и передаем данные в инпут
+function openPopup(){
+  inputPopupUserName.value = userNameProfile.textContent;
+  inputPopupUserProfession.value = userProfessionProfile.textContent;
+  popup.classList.add("popup_opened");
+};
 
-  popupUserName.value = userName.textContent;
-  popupUserProfession.value = userProfession.textContent;
-});
+// закрываем попап
+function closePopup(){
+  popup.classList.remove("popup_opened");
+};
 
-popupSubmit.addEventListener("click", (event) => {
+// сохраняем введеные данные в профиль
+function saveUserInfo (){
+  userNameProfile.textContent = inputPopupUserName.value;
+  userProfessionProfile.textContent = inputPopupUserProfession.value;
+}
+
+//отслеживаем события
+buttonEditProfile.addEventListener("click", openPopup);
+
+buttonPopupClose.addEventListener("click", closePopup);
+
+popup.addEventListener("submit", (event) => {
   event.preventDefault();
-  userName.textContent = popupUserName.value;
-  userProfession.textContent = popupUserProfession.value;
-  popup.classList.toggle("popup_opened");
-});
-//test
-popupClose.addEventListener("click", () => {
-  popup.classList.toggle("popup_opened");
+  saveUserInfo();
+  closePopup();
 });
