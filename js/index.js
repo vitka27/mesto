@@ -1,8 +1,9 @@
 // получаем элементы с popup
 let popup = document.querySelector(".popup");
+let formPopup = popup.querySelector(".popup__form")
 let buttonPopupClose = popup.querySelector(".popup__close");
-let inputPopupUserName = popup.querySelector(".popup__input_name");
-let inputPopupUserProfession = popup.querySelector(".popup__input_my-info");
+let inputPopupUserName = popup.querySelector(".popup_input_name");
+let inputPopupUserProfession = popup.querySelector(".popup_input_my-info");
 
 // получаем элементы с профиля пользователя
 let buttonEditProfile = document.querySelector(".profile-user__edit");
@@ -32,7 +33,7 @@ buttonEditProfile.addEventListener("click", openPopup);
 
 buttonPopupClose.addEventListener("click", closePopup);
 
-popup.addEventListener("submit", (event) => {
+formPopup.addEventListener("submit", (event) => {
   event.preventDefault();
   saveUserInfo();
   closePopup();
