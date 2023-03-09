@@ -2,8 +2,8 @@
 let popup = document.querySelector(".popup");
 let formPopup = popup.querySelector(".popup__form")
 let buttonPopupClose = popup.querySelector(".popup__close");
-let inputPopupUserName = popup.querySelector(".popup_input_name");
-let inputPopupUserProfession = popup.querySelector(".popup_input_my-info");
+let inputPopupUserName = popup.querySelector(".popup__input_form_name");
+let inputPopupUserProfession = popup.querySelector(".popup__input_form_my-info");
 
 // получаем элементы с профиля пользователя
 let buttonEditProfile = document.querySelector(".profile-user__edit");
